@@ -17,13 +17,13 @@ to support it.
 
 1. Mason
     - Run `:Mason` to open the menu.
-    - <C-f> to filter by a language.
+    - `<C-f>` to filter by a language.
     - Hover and press `i` to install the packages you want.
 2. Nvim-Treesitter
     - Run `:TSInstall <language>` to install treesitter's parser for that
     language.
-    - Inside init.lua, at the autocmd for `vim.treesitter.start()`, list the
-    language the parser was just installed for.
+    - List the language the parser was just installed for at the
+    `vim.treesitter.start()` autocmd.
 3. Conform
     - To connect conform to the formatter installed by Mason, add
     `<language> = "formatter"` at the `formatters_by_ft` option.
@@ -33,7 +33,7 @@ to support it.
     - Example:
 
 ```lua
-return {
+{
     cmd = { "jdtls" },
     filetypes = { "java" },
     root_marker = { "pom.xml", "build.gradle", ".git", "mvnw", "gradlew" },
@@ -42,7 +42,7 @@ return {
 
 5. Blink and LSP Enabling
     - Option 1: Create a `lsp` folder inside the `.config/nvim/` folder.
-    Inside `lsp`, create a `.lua` file returning the configuration.
+    Inside `lsp`, create a `.lua` file with the configuration.
     - Option 2: Use `vim.lsp.config()` and put your configuration inside.
     This happens at the bottom of `init.lua`.
     - After either option 1 or 2, go to the bottom of `init.lua` and add
