@@ -53,6 +53,20 @@ require("lazy").setup({
 		{ "mason-org/mason.nvim", opts = {} },
 		{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate", lazy = false },
 		{
+			"nvim-telescope/telescope.nvim",
+			dependencies = {
+				"nvim-lua/plenary.nvim",
+				{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+			},
+			keys = {
+				{ "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find Files" },
+				{ "<leader>fg", "<cmd>Telescope live_grep<cr>", desc = "Live Grep" },
+				{ "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Buffers" },
+				{ "<leader>fh", "<cmd>Telescope help_tags<cr>", desc = "Help Tags" },
+			},
+			version = "*",
+		},
+		{
 			"saghen/blink.cmp",
 			dependencies = { "rafamadriz/friendly-snippets" },
 			opts = {},

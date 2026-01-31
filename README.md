@@ -1,16 +1,19 @@
 # Minimalist Neovim Configuration
 
-This config only installs six plugins by default. These plugins are managed by
+This config only installs seven plugins by default. These plugins are managed by
 lazy.nvim, a popular plugin manager. Run `:Lazy` to access lazy.nvim's menu.
 Also, make sure these plugins' prerequisites have been installed, such as
 `tree-sitter-cli` for Nvim-Treesitter.
 
 1. Mason (Installs LSPs, Formatters, and more!)
 2. Nvim-Treesitter (Syntax Highlighting)
-3. Conform (Uses Mason's formatters to format on save)
+3. Conform.nvim (Uses Mason's formatters to format on save)
 4. Blink.cmp (Uses Mason's LSPs to provide autocomplete)
-4. Nvim-Autopairs (Autoclose brackets, parentheses, etc.)
-5. Catppuccin (Dark theme for Neovim)
+5. Nvim-Autopairs (Autoclose brackets, parentheses, etc.)
+6. Telescope.nvim (Fuzzy file finder)
+7. Catppuccin (Dark theme for Neovim)
+
+## Required Setup
 
 When installing languages, the first four plugins must be configured in order
 to support it.
