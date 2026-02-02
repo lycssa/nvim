@@ -23,6 +23,7 @@ vim.g.maplocalleader = "\\"
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.signcolumn = "yes"
+vim.opt.ignorecase = true
 vim.opt.termguicolors = true
 vim.o.expandtab = true
 vim.o.shiftwidth = 4
