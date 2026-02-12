@@ -39,7 +39,7 @@ to support it.
 {
     cmd = { "jdtls" },
     filetypes = { "java" },
-    root_marker = { "pom.xml", "build.gradle", ".git", "mvnw", "gradlew" },
+    root_markers = { "pom.xml", "build.gradle", ".git", "mvnw", "gradlew" },
 }
 ```
 
