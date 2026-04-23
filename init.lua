@@ -99,6 +99,7 @@ vim.api.nvim_create_autocmd("FileType", {
 	pattern = { "<filetype>" }, -- List filetypes here
 	callback = function()
 		vim.treesitter.start()
+		vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
 	end,
 })
 vim.cmd.colorscheme("catppuccin")
